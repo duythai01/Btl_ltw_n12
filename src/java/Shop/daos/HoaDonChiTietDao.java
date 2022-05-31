@@ -21,8 +21,8 @@ public class HoaDonChiTietDao {
         PreparedStatement statement = null;
         try {
             statement = conn.prepareStatement(sql);
-            statement.setInt(1, hdct.getHoaDonID());
-            statement.setInt(2, hdct.getSanPhamID());
+            statement.setInt(1, hdct.getHoaDon().getHoaDonID());
+            statement.setInt(2, hdct.getSanPham().getSanPhamID());
             statement.setFloat(3, hdct.getSoLuong());
             statement.executeUpdate();
         } catch (SQLException e) {
@@ -46,8 +46,8 @@ public class HoaDonChiTietDao {
         PreparedStatement statement = null;
         try {
            statement = conn.prepareStatement(sql);
-            statement.setInt(1, hdct.getHoaDonID());
-            statement.setInt(2, hdct.getSanPhamID());
+            statement.setInt(1, hdct.getHoaDon().getHoaDonID());
+            statement.setInt(2, hdct.getSanPham().getSanPhamID());
             statement.setFloat(3, hdct.getSoLuong());
            statement.setInt(4, hdct.getChiTietHoaDonID());
             statement.executeUpdate();

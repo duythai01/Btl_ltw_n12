@@ -1,29 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Shop.models;
 
+import java.util.*;
 import java.sql.Date;
+import java.io.Serializable;
 
 /**
  *
  * @author daodu
  */
+public class HoaDon implements Serializable {
 
-public class HoaDon {
     private int HoaDonID;
-    private int NguoiDungID;
+    private NguoiDung nguoiDung;
+    private List<HoaDonChiTiet> listHoaDonChiTiet;
     private Date HoaDonDate;
     private float TongTien;
-    private String DaThanhToan;
+    private boolean DaThanhToan;
 
     public HoaDon() {
     }
 
-    public HoaDon(int HoaDonID, int NguoiDungID, Date HoaDonDate, float TongTien, String DaThanhToan) {
+    public HoaDon(int HoaDonID, NguoiDung nguoiDung, List<HoaDonChiTiet> listHoaDonChiTiet, Date HoaDonDate, float TongTien, boolean DaThanhToan) {
         this.HoaDonID = HoaDonID;
-        this.NguoiDungID = NguoiDungID;
+        this.nguoiDung = nguoiDung;
+        this.listHoaDonChiTiet = listHoaDonChiTiet;
         this.HoaDonDate = HoaDonDate;
         this.TongTien = TongTien;
         this.DaThanhToan = DaThanhToan;
@@ -37,12 +37,20 @@ public class HoaDon {
         this.HoaDonID = HoaDonID;
     }
 
-    public int getNguoiDungID() {
-        return NguoiDungID;
+    public NguoiDung getNguoiDung() {
+        return nguoiDung;
     }
 
-    public void setNguoiDungID(int NguoiDungID) {
-        this.NguoiDungID = NguoiDungID;
+    public void setNguoiDung(NguoiDung nguoiDung) {
+        this.nguoiDung = nguoiDung;
+    }
+
+    public List<HoaDonChiTiet> getListHoaDonChiTiet() {
+        return listHoaDonChiTiet;
+    }
+
+    public void setListHoaDonChiTiet(List<HoaDonChiTiet> listHoaDonChiTiet) {
+        this.listHoaDonChiTiet = listHoaDonChiTiet;
     }
 
     public Date getHoaDonDate() {
@@ -61,13 +69,19 @@ public class HoaDon {
         this.TongTien = TongTien;
     }
 
-    public String getDaThanhToan() {
+    public boolean isDaThanhToan() {
         return DaThanhToan;
     }
 
-    public void setDaThanhToan(String DaThanhToan) {
+    public void setDaThanhToan(boolean DaThanhToan) {
         this.DaThanhToan = DaThanhToan;
     }
 
-   
+    public double getHoaDonTotal() {
+        double tongTien = 0.0;
+        for (HoaDonChiTiet item : listHoaDonChiTiet) {
+            tongTien += item.getTotal();
+        }
+        return tongTien;
+    }
 }

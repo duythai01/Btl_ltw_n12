@@ -1,31 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Shop.models;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
 
 /**
  *
  * @author daodu
  */
-public class HoaDonChiTiet {
+public class HoaDonChiTiet implements Serializable {
+
     private int ChiTietHoaDonID;
-    private int HoaDonID;
-    private int SanPhamID;
+    private HoaDon hoaDon;
+    private SanPham sanPham;
     private int SoLuong;
-
-
 
     public HoaDonChiTiet() {
     }
 
-    public HoaDonChiTiet(int ChiTietHoaDonID, int HoaDonID, int SanPhamID, int SoLuong) {
+    public HoaDonChiTiet(int ChiTietHoaDonID, HoaDon hoaDon, SanPham sanPham, int SoLuong) {
         this.ChiTietHoaDonID = ChiTietHoaDonID;
-        this.HoaDonID = HoaDonID;
-        this.SanPhamID = SanPhamID;
+        this.hoaDon = hoaDon;
+        this.sanPham = sanPham;
         this.SoLuong = SoLuong;
     }
 
@@ -37,20 +31,20 @@ public class HoaDonChiTiet {
         this.ChiTietHoaDonID = ChiTietHoaDonID;
     }
 
-    public int getHoaDonID() {
-        return HoaDonID;
+    public HoaDon getHoaDon() {
+        return hoaDon;
     }
 
-    public void setHoaDonID(int HoaDonID) {
-        this.HoaDonID = HoaDonID;
+    public void setHoaDon(HoaDon hoaDon) {
+        this.hoaDon = hoaDon;
     }
 
-    public int getSanPhamID() {
-        return SanPhamID;
+    public SanPham getSanPham() {
+        return sanPham;
     }
 
-    public void setSanPhamID(int SanPhamID) {
-        this.SanPhamID = SanPhamID;
+    public void setSanPham(SanPham sanPham) {
+        this.sanPham = sanPham;
     }
 
     public int getSoLuong() {
@@ -61,6 +55,8 @@ public class HoaDonChiTiet {
         this.SoLuong = SoLuong;
     }
 
-   
-   
+    public double getTotal() {
+        double total = sanPham.getGia() * SoLuong;
+        return total;
+    }
 }

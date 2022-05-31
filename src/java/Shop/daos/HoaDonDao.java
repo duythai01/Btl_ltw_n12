@@ -22,10 +22,10 @@ public class HoaDonDao {
         PreparedStatement statement = null;
         try {
             statement = conn.prepareStatement(sql);
-            statement.setInt(1, hd.getNguoiDungID());
+            statement.setInt(1, hd.getNguoiDung().getNguoiDungID());
             statement.setDate(2, hd.getHoaDonDate());
             statement.setFloat(3, hd.getTongTien());
-            statement.setString(4, hd.getDaThanhToan());
+            statement.setBoolean(4, hd.isDaThanhToan());
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -49,10 +49,10 @@ public class HoaDonDao {
         PreparedStatement statement = null;
         try {
             statement = conn.prepareStatement(sql);
-            statement.setInt(1, hd.getNguoiDungID());
+            statement.setInt(1, hd.getNguoiDung().getNguoiDungID());
             statement.setDate(2, hd.getHoaDonDate());
             statement.setFloat(3, hd.getTongTien());
-            statement.setString(4, hd.getDaThanhToan());
+            statement.setBoolean(4, hd.isDaThanhToan());
             statement.setInt(5, hd.getHoaDonID());
             statement.executeUpdate();
         } catch (SQLException e) {

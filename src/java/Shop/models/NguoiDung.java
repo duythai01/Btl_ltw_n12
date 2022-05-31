@@ -5,12 +5,13 @@
 package Shop.models;
 
 import java.sql.Date;
+import java.io.Serializable;
 
 /**
  *
  * @author daodu
  */
-public class NguoiDung {
+public class NguoiDung implements Serializable{
     private Integer NguoiDungID;
     private String Ten;
     private String TaiKhoan;

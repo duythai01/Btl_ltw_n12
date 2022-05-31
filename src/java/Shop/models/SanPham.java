@@ -1,33 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Shop.models;
+
+import java.io.Serializable;
 
 /**
  *
  * @author daodu
  */
-public class SanPham {
+public class SanPham implements Serializable {
+
     private int SanPhamID;
     private String Ten;
     private float Gia;
     private String SanPhamCode;
     private String SanPhamDescription;
-    private int TheLoaiId;
+    private String TheLoai;
+
     public SanPham() {
     }
 
-    public SanPham(int SanPhamID, String Ten, float Gia, String SanPhamCode, String SanPhamDescription, int TheLoaiId) {
+    public SanPham(int SanPhamID, String Ten, float Gia, String SanPhamCode, String SanPhamDescription, String TheLoai) {
         this.SanPhamID = SanPhamID;
         this.Ten = Ten;
         this.Gia = Gia;
         this.SanPhamCode = SanPhamCode;
         this.SanPhamDescription = SanPhamDescription;
-        this.TheLoaiId = TheLoaiId;
+        this.TheLoai = TheLoai;
     }
-
-  
 
     public int getSanPhamID() {
         return SanPhamID;
@@ -44,8 +42,6 @@ public class SanPham {
     public void setTen(String Ten) {
         this.Ten = Ten;
     }
-
-   
 
     public float getGia() {
         return Gia;
@@ -71,17 +67,17 @@ public class SanPham {
         this.SanPhamDescription = SanPhamDescription;
     }
 
-    public int getTheLoaiId() {
-        return TheLoaiId;
+    public String getTheLoai() {
+        return TheLoai;
     }
 
-    public void setTheLoaiId(int TheLoaiId) {
-        this.TheLoaiId = TheLoaiId;
+    public void setTheLoai(String TheLoai) {
+        this.TheLoai = TheLoai;
     }
 
+    public String getImageURL() {
+        String imageURL = "/musicStore/images/" + SanPhamCode + "_cover.jpg";
+        return imageURL;
+    }
 
-   
-
-   
-  
 }

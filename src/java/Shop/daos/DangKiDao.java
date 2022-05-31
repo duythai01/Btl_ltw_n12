@@ -54,28 +54,28 @@ public class DangKiDao {
         return kiemTra;
 
     }
-    
-    public boolean dangKi(NguoiDung u){
+
+    public boolean dangKi(NguoiDung u) {
         Connection conn = getConnection();
         PreparedStatement statement = null;
         boolean thanhCong = false;
-        try{
-            String sql = "INSERT INTO NguoiDung (Ten,TaiKhoan,MatKhau,NgaySinh,Sdt,DiaChi,Email,ChucVu) values (?,?,?,?,?,?,?,?)"; 
+        try {
+            String sql = "INSERT INTO NguoiDung (Ten,TaiKhoan,MatKhau,NgaySinh,Sdt,DiaChi,Email,ChucVu) values (?,?,?,?,?,?,?,?)";
             statement = conn.prepareStatement(sql);
-            statement.setString(1,u.getTen());
-            statement.setString(2,u.getTaiKhoan());
-            statement.setString(3,u.getMatKhau());
-            statement.setDate(4,u.getNgaySinh());
-            statement.setString(5,u.getSdt());
-            statement.setString(6,u.getDiaChi());
-            statement.setString(7,u.getEmail());
-            statement.setString(8,u.getChucVu());
+            statement.setString(1, u.getTen());
+            statement.setString(2, u.getTaiKhoan());
+            statement.setString(3, u.getMatKhau());
+            statement.setDate(4, u.getNgaySinh());
+            statement.setString(5, u.getSdt());
+            statement.setString(6, u.getDiaChi());
+            statement.setString(7, u.getEmail());
+            statement.setString(8, u.getChucVu());
             statement.executeUpdate();
             thanhCong = true;
-        } catch (SQLException e){
-              e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-          return thanhCong;
+        return thanhCong;
     }
-  
+
 }

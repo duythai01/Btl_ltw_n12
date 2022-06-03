@@ -13,7 +13,7 @@ import java.sql.*;
  */
 public class ConnectMysql {
 
-    ;
+
 
    public static Connection getConnection() {
         String dbURL = "jdbc:mysql://localhost:3306/clothing_store_btl";
@@ -22,7 +22,7 @@ public class ConnectMysql {
         Connection conn = null;
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(ConnectMysql.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }

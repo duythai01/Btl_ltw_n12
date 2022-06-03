@@ -105,7 +105,7 @@ public class SanPhamDao {
     public List<SanPham> layTatCaSP() {
         Connection conn = getConnection();
         List<SanPham> rs = new ArrayList<>();
-        String sql = "select * from SanPham";
+        String sql = "select * from sanpham";
         PreparedStatement statement = null;
         ResultSet rsSet = null;
         if (conn != null) {
@@ -193,13 +193,58 @@ public class SanPhamDao {
     public List<SanPham> laySPTheoTen(String ten) {
         Connection conn = getConnection();
         List<SanPham> rs = new ArrayList<>();
-        String sql = "select * from sanpham where tenSP LIKE ?";
+        String sql = "select * from sanpham where Ten LIKE ?";
         PreparedStatement statement = null;
         ResultSet rsSet = null;
         if (conn != null) {
             try {
                 statement = conn.prepareStatement(sql);
                 statement.setString(1, ten);
+                rsSet = statement.executeQuery();
+                while (rsSet.next()) {
+                    SanPham sp = new SanPham();
+                    sp.setTen(rsSet.getString("Ten"));
+                    sp.setGia(rsSet.getFloat("Gia"));
+                    sp.setSanPhamCode(rsSet.getString("SanPhamCode"));
+                    sp.setSanPhamDescription(rsSet.getString("SanPhamDescription"));
+                    sp.setTheLoai(rsSet.getString("TheLoai"));
+                    rs.add(sp);
+                }
+
+            } catch (SQLException ex) {
+                java.util.logging.Logger.getLogger(SanPhamDao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+            } finally {
+                try {
+                    if (conn != null) {
+                        conn.close();
+                    }
+                    if (statement != null) {
+                        statement.close();
+                    }
+                    if (rsSet != null) {
+                        rsSet.close();
+                    }
+                    return rs;
+                } catch (SQLException e) {
+                    return null;
+                }
+            }
+        }
+
+        return null;
+    }
+    
+     public List<SanPham> laySPTheoTL(String tl) {
+        Connection conn = getConnection();
+        List<SanPham> rs = new ArrayList<>();
+        String sql = "select * from sanpham where TheLoai LIKE ?";
+        PreparedStatement statement = null;
+        ResultSet rsSet = null;
+        if (conn != null) {
+            try {
+                statement = conn.prepareStatement(sql);
+                statement.setString(1, tl);
                 rsSet = statement.executeQuery();
                 while (rsSet.next()) {
                     SanPham sp = new SanPham();

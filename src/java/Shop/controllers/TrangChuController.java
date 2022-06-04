@@ -1,5 +1,7 @@
 package Shop.controllers;
 
+import Shop.daos.SanPhamDao;
+import Shop.models.SanPham;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(urlPatterns = {""})
 public class TrangChuController extends HttpServlet {
@@ -18,6 +21,10 @@ public class TrangChuController extends HttpServlet {
         req.setCharacterEncoding("utf-8");
 
         resp.setCharacterEncoding("utf-8");
+        List<SanPham> spList = SanPhamDao.layTatCaSP();
+        req.setAttribute("spList", spList);
+        SanPham sp = new SanPham(2, "FDAFDAS", 1000, "FDAfda", "fdafad", "fdafd");
+        req.setAttribute("sp", sp);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/trang_chu.jsp");
         dispatcher.forward(req,resp);
     }

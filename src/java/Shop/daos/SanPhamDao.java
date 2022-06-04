@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class SanPhamDao {
 
-    public void themSP(SanPham sp) {
+    public static void themSP(SanPham sp) {
         String sql = "INSERT INTO sanpham( Ten, Gia, SanPhamCode, SanPhamDescription,TheLoai) VALUES (?, ?, ?,?,?)";
         Connection conn = ConnectMysql.getConnection();
         PreparedStatement statement = null;
@@ -102,7 +102,7 @@ public class SanPhamDao {
 
     }
 
-    public List<SanPham> layTatCaSP() {
+    public static List<SanPham> layTatCaSP() {
         Connection conn = getConnection();
         List<SanPham> rs = new ArrayList<>();
         String sql = "select * from SanPham";

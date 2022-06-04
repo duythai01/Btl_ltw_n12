@@ -16,15 +16,16 @@ import java.io.IOException;
  *
  * @author daodu
  */
-@WebServlet(urlPatterns = {"/cart"})
+@WebServlet("/cart")
 public class CartController extends HttpServlet {
-        @Override
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
 
         resp.setCharacterEncoding("utf-8");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/cart.jsp");
-        dispatcher.forward(req,resp);
+        dispatcher.forward(req, resp);
     }
 
     @Override

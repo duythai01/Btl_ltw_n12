@@ -3,7 +3,7 @@
     Created on : May 30, 2022, 9:54:11 PM
     Author     : daodu
 --%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +19,10 @@
 </head>
 
 <body>
+    <c:forEach items="${spList}" var="sanpham">
+        <h1>${sanpham.getTen()}</h1>
+    </c:forEach>
+    <h1>${sp.getTen()}</h1>
     <div class="trang_chu">
 
         <div class="logo-header">

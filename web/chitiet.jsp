@@ -20,20 +20,21 @@
 </head>
 
 <body>
+ 
     <div class="ung_dung">
         <div class="than">
             <div class="than1">
                 <div class="than2">
                     <div class="sp_trai">
                         <div class="sp_anh_lon">
-                            <img class="sp_anh_chinh" src="https://nhatminhdecor.com/wp-content/uploads/2019/01/chup-anh-voi-mau-that-800x800.jpg" alt="">
+                            <img class="sp_anh_chinh" src="./images/AnhSanPham/${sp_ChiTiet.getSanPhamCode()}.jpg" alt="">
                         </div>
                         <div class="sp_anh_nho">
-                            <img class="sp_anh_nho1" src="https://nhatminhdecor.com/wp-content/uploads/2019/01/chup-anh-voi-mau-that-800x800.jpg" alt="">
-                            <img class="sp_anh_nho1" src="https://nhatminhdecor.com/wp-content/uploads/2019/01/chup-anh-voi-mau-that-800x800.jpg" alt="">
-                            <img class="sp_anh_nho1" src="https://nhatminhdecor.com/wp-content/uploads/2019/01/chup-anh-voi-mau-that-800x800.jpg" alt="">
-                            <img class="sp_anh_nho1" src="https://nhatminhdecor.com/wp-content/uploads/2019/01/chup-anh-voi-mau-that-800x800.jpg" alt="">
-                            <img class="sp_anh_nho1" src="https://nhatminhdecor.com/wp-content/uploads/2019/01/chup-anh-voi-mau-that-800x800.jpg" alt="">
+                            <img class="sp_anh_nho1" src="./images/AnhSanPham/${sp_ChiTiet.getSanPhamCode()}.jpg" alt="">
+                            <img class="sp_anh_nho1" src="./images/AnhSanPham/${sp_ChiTiet.getSanPhamCode()}.jpg" alt="">
+                            <img class="sp_anh_nho1" src="./images/AnhSanPham/${sp_ChiTiet.getSanPhamCode()}.jpg" alt="">
+                            <img class="sp_anh_nho1" src="./images/AnhSanPham/${sp_ChiTiet.getSanPhamCode()}.jpg" alt="">
+                            <img class="sp_anh_nho1" src="./images/AnhSanPham/${sp_ChiTiet.getSanPhamCode()}.jpg" alt="">
                         </div>
                         <div class="sp_duoi_trai">
                             <div class="sp_duoi_trai_chia_se">
@@ -54,8 +55,7 @@
                     </div>
                     <div class="sp_phai">
                         <div class="sp_phai_dau">
-                            <span> áo thun nam nữ BOY CHÙM ĐẦU, áo thun tay
-                                lỡ nam nữ unisex, SupperShop</span>
+                            <span> ${sp_ChiTiet.getTen()}</span>
                         </div>
                         <div class="sp_phai_thong_tin">
                             <div class="sp_phai_sao">
@@ -77,7 +77,7 @@
                         </div>
                         <div class="sp_phai_gia">
                             <span class="sp_phai_gia_cu">50.000đ</span>
-                            <span class="sp_phai_gia_moi">30.000đ</span>
+                            <span class="sp_phai_gia_moi">${sp_ChiTiet.getGia()}</span>
                             <span class="sp_phai_gia_giam">40% GIẢM</span>
                         </div>
                         <div class="sp_phai_ma">

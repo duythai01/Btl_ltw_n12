@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @WebServlet(urlPatterns = {""})
@@ -24,6 +25,7 @@ public class TrangChuController extends HttpServlet {
         List<SanPham> spList = new ArrayList<>();
         
         spList = spDao.layTatCaSP();
+        Collections.reverse(spList);
         req.setAttribute("spList", spList);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/trang_chu.jsp");
         dispatcher.forward(req,resp);

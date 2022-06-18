@@ -75,8 +75,8 @@
             <div class="content-san-pham">
                 <!-- product -->
                 <c:forEach items="${spNamList}" var="spNam" end = "5">
-                   <a class="content-san-pham-con" href="https://shopee.vn/-M%C3%A3-254FASHIONSALE-gi%E1%BA%A3m-12-%C4%91%C6%A1n-99K-%C3%81o-thun-nam-POLO-tr%C6%A1n-v%E1%BA%A3i-c%C3%A1-s%E1%BA%A5u-cotton-cao-c%E1%BA%A5p-ng%E1%BA%AFn-tay-c%E1%BB%B1c-sang-tr%E1%BB%8Dng-i.296694982.3448103572?sp_atk=888237c0-7298-44b7-aef0-00c25062c816">
-                    <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${spNam.getSanPhamCode()});"></div>
+                   <a class="content-san-pham-con" href="sp_chiTiet?spctid=${spNam.getSanPhamID()}">
+                    <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${spNam.getSanPhamCode()}.jpg);"></div>
                     <h4 class="content-san-pham-con-ten">${spNam.getTen()}</h4>
                     <div class="content-san-pham-con-gia">
                         <span class="content-san-pham-con-gia-cu">1.200.000đ</span>
@@ -271,7 +271,7 @@
             <div class="content-san-pham">
                 <!-- product -->
                  <c:forEach items="${spNuList}" var="spNu" end = "5">
-                   <a class="content-san-pham-con" href="https://shopee.vn/-M%C3%A3-254FASHIONSALE-gi%E1%BA%A3m-12-%C4%91%C6%A1n-99K-%C3%81o-thun-nam-POLO-tr%C6%A1n-v%E1%BA%A3i-c%C3%A1-s%E1%BA%A5u-cotton-cao-c%E1%BA%A5p-ng%E1%BA%AFn-tay-c%E1%BB%B1c-sang-tr%E1%BB%8Dng-i.296694982.3448103572?sp_atk=888237c0-7298-44b7-aef0-00c25062c816">
+                   <a class="content-san-pham-con" href="sp_chiTiet?spctid=${spNu.getSanPhamID()}">
                     <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${spNu.getSanPhamCode()}.jpg);"></div>
                     <h4 class="content-san-pham-con-ten">${spNu.getTen()}</h4>
                     <div class="content-san-pham-con-gia">

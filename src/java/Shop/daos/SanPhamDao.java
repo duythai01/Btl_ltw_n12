@@ -116,6 +116,7 @@ public class SanPhamDao {
                     SanPham sp = new SanPham();
                     sp.setTen(rsSet.getString("Ten"));
                     sp.setGia(rsSet.getFloat("Gia"));
+                     sp.setSanPhamID(rsSet.getInt("SanPhamID"));
                     sp.setSanPhamCode(rsSet.getString("SanPhamCode"));
                     sp.setSanPhamDescription(rsSet.getString("SanPhamDescription"));
                     sp.setTheLoai(rsSet.getString("TheLoai"));
@@ -146,24 +147,26 @@ public class SanPhamDao {
         return null;
     }
 
-    public List<SanPham> laySPTheoId(int id) {
+    public SanPham laySPTheoId(int id) {
         Connection conn = getConnection();
-        List<SanPham> rs = new ArrayList<>();
+       SanPham sp = new SanPham();
         String sql = "select * from sanpham where SanPhamID = ?";
-        PreparedStatement statement = null;
+        PreparedStatement statement = null;    
         ResultSet rsSet = null;
         if (conn != null) {
             try {
                 statement = conn.prepareStatement(sql);
+                statement.setInt(1, id);
                 rsSet = statement.executeQuery();
                 while (rsSet.next()) {
-                    SanPham sp = new SanPham();
+                    
                     sp.setTen(rsSet.getString("Ten"));
                     sp.setGia(rsSet.getFloat("Gia"));
                     sp.setSanPhamCode(rsSet.getString("SanPhamCode"));
+                    sp.setSanPhamID(rsSet.getInt("SanPhamID"));
                     sp.setSanPhamDescription(rsSet.getString("SanPhamDescription"));
                     sp.setTheLoai(rsSet.getString("TheLoai"));
-                    rs.add(sp);
+           
                 }
 
             } catch (SQLException ex) {
@@ -180,7 +183,7 @@ public class SanPhamDao {
                     if (rsSet != null) {
                         rsSet.close();
                     }
-                    return rs;
+                    return sp;
                 } catch (SQLException e) {
                     return null;
                 }
@@ -206,6 +209,7 @@ public class SanPhamDao {
                     sp.setTen(rsSet.getString("Ten"));
                     sp.setGia(rsSet.getFloat("Gia"));
                     sp.setSanPhamCode(rsSet.getString("SanPhamCode"));
+                     sp.setSanPhamID(rsSet.getInt("SanPhamID"));
                     sp.setSanPhamDescription(rsSet.getString("SanPhamDescription"));
                     sp.setTheLoai(rsSet.getString("TheLoai"));
                     rs.add(sp);
@@ -251,6 +255,7 @@ public class SanPhamDao {
                     sp.setTen(rsSet.getString("Ten"));
                     sp.setGia(rsSet.getFloat("Gia"));
                     sp.setSanPhamCode(rsSet.getString("SanPhamCode"));
+                     sp.setSanPhamID(rsSet.getInt("SanPhamID"));
                     sp.setSanPhamDescription(rsSet.getString("SanPhamDescription"));
                     sp.setTheLoai(rsSet.getString("TheLoai"));
                     rs.add(sp);

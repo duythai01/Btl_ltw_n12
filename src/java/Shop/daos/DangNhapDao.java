@@ -20,7 +20,7 @@ public class DangNhapDao {
     public NguoiDung kiemTraDangNhap(String tk, String mk) {
         Connection conn = getConnection();
         NguoiDung u = new NguoiDung();
-        String sql = "select * from NguoiDung where TaiKhoan = ? and MatKhau = ?";
+        String sql = "select * from nguoidung where TaiKhoan = ? and MatKhau = ?";
         PreparedStatement statement = null;
         ResultSet rsSet = null;
         if (conn != null) {

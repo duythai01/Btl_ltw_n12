@@ -14,27 +14,15 @@ import java.io.Serializable;
 public class NguoiDung implements Serializable{
     private Integer NguoiDungID;
     private String Ten;
-    private String TaiKhoan;
-    private String MatKhau;
-    private Date NgaySinh;
+//    private String TaiKhoan;
+//    private String MatKhau;
+//    private Date NgaySinh;
     private String Sdt;
     private String DiaChi;
     private String Email;
-    private String ChucVu;
+//    private String ChucVu;
 
     public NguoiDung() {
-    }
-
-    public NguoiDung(Integer NguoiDungID, String Ten, String TaiKhoan, String MatKhau, Date NgaySinh, String Sdt, String DiaChi, String Email, String ChucVu) {
-        this.NguoiDungID = NguoiDungID;
-        this.Ten = Ten;
-        this.TaiKhoan = TaiKhoan;
-        this.MatKhau = MatKhau;
-        this.NgaySinh = NgaySinh;
-        this.Sdt = Sdt;
-        this.DiaChi = DiaChi;
-        this.Email = Email;
-        this.ChucVu = ChucVu;
     }
 
     public Integer getNguoiDungID() {
@@ -53,29 +41,29 @@ public class NguoiDung implements Serializable{
         this.Ten = Ten;
     }
 
-    public String getTaiKhoan() {
-        return TaiKhoan;
-    }
-
-    public void setTaiKhoan(String TaiKhoan) {
-        this.TaiKhoan = TaiKhoan;
-    }
-
-    public String getMatKhau() {
-        return MatKhau;
-    }
-
-    public void setMatKhau(String MatKhau) {
-        this.MatKhau = MatKhau;
-    }
-
-    public Date getNgaySinh() {
-        return NgaySinh;
-    }
-
-    public void setNgaySinh(Date NgaySinh) {
-        this.NgaySinh = NgaySinh;
-    }
+//    public String getTaiKhoan() {
+//        return TaiKhoan;
+//    }
+//
+//    public void setTaiKhoan(String TaiKhoan) {
+//        this.TaiKhoan = TaiKhoan;
+//    }
+//
+//    public String getMatKhau() {
+//        return MatKhau;
+//    }
+//
+//    public void setMatKhau(String MatKhau) {
+//        this.MatKhau = MatKhau;
+//    }
+//
+//    public Date getNgaySinh() {
+//        return NgaySinh;
+//    }
+//
+//    public void setNgaySinh(Date NgaySinh) {
+//        this.NgaySinh = NgaySinh;
+//    }
 
     public String getSdt() {
         return Sdt;
@@ -101,13 +89,13 @@ public class NguoiDung implements Serializable{
         this.Email = Email;
     }
 
-    public String getChucVu() {
-        return ChucVu;
-    }
-
-    public void setChucVu(String ChucVu) {
-        this.ChucVu = ChucVu;
-    }
+//    public String getChucVu() {
+//        return ChucVu;
+//    }
+//
+//    public void setChucVu(String ChucVu) {
+//        this.ChucVu = ChucVu;
+//    }
 
    
     

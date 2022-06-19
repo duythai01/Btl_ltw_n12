@@ -24,7 +24,6 @@ public class GioHang implements Serializable {
     }
 
     public void themSanPham(HoaDonChiTiet item) {
-        //If the item already exists in the cart, only the quantity is changed.
         String code = item.getSanPham().getSanPhamCode();
         int soLuong = item.getSoLuong();
         for (HoaDonChiTiet lineItem : listHoaDonChiTiet) {
@@ -36,7 +35,7 @@ public class GioHang implements Serializable {
         listHoaDonChiTiet.add(item);
     }
 
-    public void removeItem(HoaDonChiTiet item) {
+    public void xoaSanPham(HoaDonChiTiet item) {
         String code = item.getSanPham().getSanPhamCode();
         for (int i = 0; i < listHoaDonChiTiet.size(); i++) {
             HoaDonChiTiet lineItem = listHoaDonChiTiet.get(i);

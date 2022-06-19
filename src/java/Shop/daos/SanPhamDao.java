@@ -192,6 +192,52 @@ public class SanPhamDao {
 
         return null;
     }
+    
+    public SanPham laySPTheoCode(String code) {
+        Connection conn = getConnection();
+       SanPham sp = new SanPham();
+        String sql = "select * from sanpham where SanPhamCode = ?";
+        PreparedStatement statement = null;    
+        ResultSet rsSet = null;
+        if (conn != null) {
+            try {
+                statement = conn.prepareStatement(sql);
+                statement.setString(1, code);
+                rsSet = statement.executeQuery();
+                while (rsSet.next()) {
+                    
+                    sp.setTen(rsSet.getString("Ten"));
+                    sp.setGia(rsSet.getFloat("Gia"));
+                    sp.setSanPhamCode(rsSet.getString("SanPhamCode"));
+                    sp.setSanPhamID(rsSet.getInt("SanPhamID"));
+                    sp.setSanPhamDescription(rsSet.getString("SanPhamDescription"));
+                    sp.setTheLoai(rsSet.getString("TheLoai"));
+           
+                }
+
+            } catch (SQLException ex) {
+                java.util.logging.Logger.getLogger(SanPhamDao.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+            } finally {
+                try {
+                    if (conn != null) {
+                        conn.close();
+                    }
+                    if (statement != null) {
+                        statement.close();
+                    }
+                    if (rsSet != null) {
+                        rsSet.close();
+                    }
+                    return sp;
+                } catch (SQLException e) {
+                    return null;
+                }
+            }
+        }
+
+        return null;
+    }
 
     public List<SanPham> laySPTheoTen(String ten) {
         Connection conn = getConnection();

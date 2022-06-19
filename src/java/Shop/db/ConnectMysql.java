@@ -18,7 +18,7 @@ public class ConnectMysql {
    public static Connection getConnection() {
         String dbURL = "jdbc:mysql://localhost:3306/clothing_store_btl";
         String userName = "root";
-        String password = "1234";
+        String password = "fazeniko123"; // thay password cua o neu khac nhe
         Connection conn = null;
 
         try {

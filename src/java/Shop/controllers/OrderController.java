@@ -1,12 +1,10 @@
 package Shop.controllers;
 
 import java.io.IOException;
-import jakarta.mail.MessagingException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 
 import Shop.daos.*;
-import Shop.db.*;
 import Shop.models.*;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.annotation.WebServlet;

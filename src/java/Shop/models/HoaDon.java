@@ -77,8 +77,8 @@ public class HoaDon implements Serializable {
         this.DaThanhToan = DaThanhToan;
     }
 
-    public double getHoaDonTotal() {
-        double tongTien = 0.0;
+    public float getHoaDonTotal() {
+        float tongTien = 0.0f;
         for (HoaDonChiTiet item : listHoaDonChiTiet) {
             tongTien += item.getTotal();
         }

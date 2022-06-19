@@ -15,13 +15,13 @@ import java.sql.SQLException;
  * @author daodu
  */
 public class HoaDonChiTietDao {
-    public void themHoaDonChiTiet(HoaDonChiTiet hdct){
+    public static void themHoaDonChiTiet(int hoaDonID, HoaDonChiTiet hdct){
         String sql = "INSERT INTO chitiethoadon( HoaDonID, SanPhamID, SoLuong) VALUES (?, ?, ?)";
         Connection conn = ConnectMysql.getConnection();
         PreparedStatement statement = null;
         try {
             statement = conn.prepareStatement(sql);
-            statement.setInt(1, hdct.getHoaDon().getHoaDonID());
+            statement.setInt(1, hoaDonID);
             statement.setInt(2, hdct.getSanPham().getSanPhamID());
             statement.setFloat(3, hdct.getSoLuong());
             statement.executeUpdate();

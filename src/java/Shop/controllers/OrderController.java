@@ -183,11 +183,12 @@ public class OrderController extends HttpServlet {
         NguoiDung user = (NguoiDung) session.getAttribute("user");       
         GioHang cart = (GioHang) session.getAttribute("cart");
 
-        java.util.Date today = new java.util.Date();
+        java.util.Date utilDate = new java.util.Date();
+        java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
 
         HoaDon invoice = new HoaDon();
         invoice.setNguoiDung(user);
-        invoice.setHoaDonDate(today);
+        invoice.setHoaDonDate(sqlDate);
         invoice.setListHoaDonChiTiet(cart.getListHoaDonChiTiet());
         
         session.setAttribute("invoice", invoice);
@@ -198,6 +199,9 @@ public class OrderController extends HttpServlet {
     private String completeOrder(HttpServletRequest request,
             HttpServletResponse response) {
 
+        HttpSession session = request.getSession();
+        HoaDon invoice = (HoaDon) session.getAttribute("invoice");
+        HoaDonDao.themHoaDon(invoice);
         
         return "/cart/thanhcong.jsp";
     }    

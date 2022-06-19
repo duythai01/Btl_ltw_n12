@@ -1,7 +1,7 @@
 package Shop.models;
 
 import java.util.*;
-import java.util.Date;
+import java.sql.Date;
 import java.io.Serializable;
 
 /**

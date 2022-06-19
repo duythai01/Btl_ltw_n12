@@ -16,7 +16,7 @@ import java.sql.SQLException;
  */
 public class HoaDonDao {
 
-    public void themHoaDon(HoaDon hd) {
+    public static void themHoaDon(HoaDon hd) {
         String sql = "INSERT INTO hoadon( NguoiDungID, HoaDonDate, TongTien, DaThanhToan) VALUES (?, ?, ?,?)";
         Connection conn = ConnectMysql.getConnection();
         PreparedStatement statement = null;

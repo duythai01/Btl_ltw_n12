@@ -15,198 +15,184 @@
         <title>hoa_don</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <link rel="stylesheet" href="./css/thanhtoan.css">
+        <link rel="stylesheet" href="../css/thanhtoan.css">
         <link href="https: //fonts.googleapis.com/css2? family = Roboto: ital, wght @ 0,300; 0,500; 0,700; 1,400 & display = swap " rel=" stylesheet ">
     </head>
 
     <body>
-        <!--    <div class="ung_dung">
-                <div class="gio_hang">
-                    <div class="gio_hang1">
-                        <div class="gio_hang_thanh_toan">
-                            <div class="them_ma_giam">
-                                <div class="them_ma_giam_all">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/612/612885.png" alt="" class="them_ma_giam_img">
-                                    <p class="them_ma_giam_trai">
-                                        Shoper Vocher
-                                    </p>
-                                    <p class="them_ma_giam_phai">
-                                        Chọn Hoặc Nhập Mã
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="xac_nhan_thanh_toan">
-                                <div class="xac_nhan_thanh_toan_trai">
-                                    <i class="fa-solid fa-square xac_nhan_thanh_toan_trai_box"></i>
-                                    <div class="xac_nhan_thanh_toan_trai_chu">
-                                        <span class="xac_nhan_thanh_toan_trai_chu1">
-                                            Chọn Tất Cả (1)
-                                        </span>
-                                        <span class="xac_nhan_thanh_toan_trai_chu2">
-                                            Xóa Tất Cả Đã Chọn
-                                        </span>
-        
-                                    </div>
-                                </div>
-                                <div class="xac_nhan_thanh_toan_phai">
-                                    <span class="xac_nhan_thanh_toan_phai_chu">
-                                        Tổng thanh toán (1 sản phẩm):
-                                    </span>
-                                    <span class="xac_nhan_thanh_toan_phai2">
-                                        9.000.000đ
-                                    </span>
-                                    <div class="xac_nhan_thanh_toan_phai_mua">
-                                        <button class="nut nut_chinh">
-                                            <a style="text-decoration: none;color: rgb(49, 48, 48);" href="http://127.0.0.1:5500/hoadon.html">Đặt Hàng</a>
-                                        </button>
-                                    </div>
-                                </div>
-        
-                            </div>
-                        </div>
+        <div class="logo-header">
+                <img class="header-anh" src="../images/_13.04_-fixtop.chaohe50k.png" alt="">
+            </div>
+            <!-- header -->
+            <div class="header">
+                <div class="header__thanh-menu">
+                    <div class="header__thanh-menu-logo">
+                        <img class="header__thanh-menu-anh" src="../images/logo.svg" alt="">
                     </div>
-                </div>
-        
-                <div class="than_gio_hang">
-                    <div class="than_than_gio_hang">
-                        <div class="gio_hang1 gio_hang1x">
-                            <div class="goi_y_ma_giam">
-                                <i class="fa-solid fa-truck"></i>
-                                <span class="goi_y_ma_giam_chu">
-                                    Nhấn vào mục Mã giảm giá ở cuối trang để hưởng miễn phí vận chuyển bạn nhé!
-                                </span>
-                            </div>
-        
-                            <div class="ds_sp">
-                                <div class="ds_sp_trai">
-                                    <i class="fa-solid fa-square xac_nhan_thanh_toan_trai_box"></i>
-                                    <span class="ds_sp_trai_chu">
-                                        Sản phẩm
-                                    </span>
-                                </div>
-                                <div class="ds_sp_phai">
-                                    <span class="ds_sp_phai_chu1">Đơn Giá</span>
-                                    <span class="ds_sp_phai_chu1">Số Lượng</span>
-                                    <span class="ds_sp_phai_chu1">Số Tiền</span>
-                                    <span class="ds_sp_phai_chu1">Thao Tác</span>
-                                </div>
-                            </div>
-                            <ul class="ds_cac_sp">
-                                <li class="chi_tiet_sp">
-                                    <div class="chi_tiet_sp_tren">
-                                        <div class="chi_tiet_sp_tren_icon">
-                                            <i class="fa-solid fa-square xac_nhan_thanh_toan_trai_box"></i>
-                                        </div>
-                                        <div class="chi_tiet_sp_tren_thich">Yêu thích</div>
-                                        <div class="chi_tiet_sp_tren_ten">SuperShop</div>
-                                        <div class="chi_tiet_sp_tren_message"><i class="fa-solid fa-message"></i></div>
-                                    </div>
-                                    <div class="chi_tiet_sp_giua">
-                                        <div class="vien_giua">
-                                            <div class="chi_tiet_sp_giua_dau">
-                                                <div class="chi_tiet_sp_giua_dau-chu1">
-                                                    Deal Sốc
-                                                </div>
-                                                <div class="chi_tiet_sp_giua_dau-chu2">
-                                                    Mua kèm deal độc quyền
-                                                </div>
-        
-                                            </div>
-                                            <div class="chi_tiet_sp_giua_than">
-                                                <div class="chi_tiet_sp_giua_than_trai">
-                                                    <div class="chi_tiet_sp_giua_than-icon">
-                                                        <i class="fa-solid fa-square-check xac_nhan_thanh_toan_trai_box-tick"></i>
-                                                         <i class="fa-solid fa-square xac_nhan_thanh_toan_trai_box"></i> 
-                                                    </div>
-                                                    <div class="chi_tiet_sp_giua_than-img">
-                                                        <img src="https://nhatminhdecor.com/wp-content/uploads/2019/01/chup-anh-voi-mau-that-800x800.jpg" alt="" class="chi_tiet_sp_giua_than-img1">
-                                                    </div>
-                                                    <a href="http://127.0.0.1:5500/detail.html" class="chi_tiet_sp_ten">áo thun nam nữ BOY CHÙM
-                                                        ĐẦU, áo
-                                                        thun tay lỡ nam nữ unisex</a>
-                                                </div>
-                                                <div class="chi_tiet_sp_giua_than_phai">
-                                                    <span class="chi_tiet_sp_giua_than_gia">9.000.000đ</span>
-                                                    <div class="chi_tiet_sp_giua_than_so">
-                                                        <span class="chi_tiet_sp_giua_than_so_them">+</span>
-                                                        <span class="chi_tiet_sp_giua_than_sos">1</span>
-                                                        <span class="chi_tiet_sp_giua_than_so_giam">-</span>
-                                                    </div>
-                                                    <span class="chi_tiet_sp_giua_than_don_gia">9.000.000đ</span>
-                                                    <div class="chi_tiet_sp_giua_than_xoa_sp">Xóa</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-        
-                                    <div class="chi_tiet_sp_cuoi">
-                                        <div class="chi_tiet_sp_cuoi_icon">
-                                            <img src="https://cdn-icons-png.flaticon.com/128/612/612885.png" alt="" class="them_ma_giam_img">
-                                        </div>
-                                        <span class="chi_tiet_sp_cuoi_chu">Thêm mã giảm giá của shop</span>
-                                    </div>
-                                </li>
-        
-                            </ul>
-        
-                        </div>
-                    </div>
-        
-                </div>
-            </div>-->
+                    <div class="header__thanh-menu-menu">
+                        <ul class="header__thanh-menu-menu-danh-sach">
+                            <li class="header__thanh-menu-menu-chi-tiet">
+                                <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/">TRANG CHỦ</a>
+                            </li>
+                            <li class="header__thanh-menu-menu-chi-tiet">
+                                <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/san_pham">SẢN PHẨM</a>
+                            </li>
+                            <li class="header__thanh-menu-menu-chi-tiet">
+                                <a class="header__thanh-menu-duong-dan" href="/Btl_ltw_n12/order/showCart">GIỎ HÀNG</a>
+                            </li>
 
+                            <li class="header__thanh-menu-menu-chi-tiet">
+                                <a class="header__thanh-menu-duong-dan" href="">OUTLET</a>
+                            </li>
+                            <li class="header__thanh-menu-menu-chi-tiet">
+                                <a class="header__thanh-menu-duong-dan" href="">LIÊN HỆ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__thanh-menu-tim-kiem">
+                        <div class="tim-kiem-nhap-va-tim-kiem">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input class="tim-kiem-nhap" type="text" placeholder="Nhập để tìm kiếm sản phẩm">
+                        </div>
+                    </div>
+                    <div class="header__thanh-menu-icon">
+                        <i class="fa-solid fa-store"></i>
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-user"></i>
+<!--                        <i class="fa-solid fa-cart-arrow-down">
+                            <a href="/cart"/>
+                        </i>-->
+                    </div>
+                </div>
+            </div>
         <section class="cart">
-            <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+            <div><%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-            <h1>Your invoice</h1>
+            <h1>Hóa Đơn</h1>
+            <div class="ngay">Thời gian  : ${invoice.getHoaDonDate()}</div>
+            <div class="diachi">Tên khách hàng : ${user.getTen()} </div>
+            <div class="diachi">Email khách hàng : ${user.getEmail()} </div>
+            <div class="diachi">Giao tới địa chỉ  : ${user.getDiaChi()} </div> 
+            <div class="diachi">Sđt người nhận: ${user.getSdt()}</div>
+            <div><div class="kengang" style="border: 1px white solid"></div></div>
+            <div style="font-weight: 1000" class="chimuc">
+                <span style="">SL</span>
+                <span style="">Tên</span>
+                <span style="">Giá</span>
+            </div>
+            <c:forEach var="item" items="${invoice.getListHoaDonChiTiet()}">
+                <div class="chimuccha"><span style="" class="chimuccon">${item.getSoLuong()}</span>
+                <span style="" class="chimuccon">${item.sanPham.getTen()}</span>
+                <span style="" class="chimuccon">${item.sanPham.getGia()}</span></div>
+            </c:forEach>
+            <div class="tongtien">
+                    <span> Tổng số tiền : ${invoice.getHoaDonTotal()}</span>
+                    
+                </div>
+            
+            
 
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <td>${invoice.getHoaDonDate()}</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th class="top">Ship To</th>
-                    <td>${user.getTen()}</td>
-                    <td>${user.getEmail()}</td>
-                    <td>${user.getDiaChi()}</td>
-                    <td>${user.getSdt()}</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td colspan="3"><hr></td>
-                </tr>
-                <tr>
-                    <th>Qty</th>
-                    <th>Ten</th>
-                    <th>Price</th>
-                </tr>
-
-                <c:forEach var="item" items="${invoice.getListHoaDonChiTiet()}">
-                    <tr>
-                        <td>${item.getSoLuong()}</td>
-                        <td>${item.sanPham.getTen()}</td>
-                        <td>${item.sanPham.getGia()}</td>
-                    </tr>
-                </c:forEach>
-
-                <tr>
-                    <th>Total:</th>
-                    <td></td>
-                    <td>${invoice.getHoaDonTotal()}</td>
-                </tr>
-            </table>
-
-            <form action="<c:url value='/order/displayUser' />" method="post" id="float_left">
-                <input type="submit" value="Edit Address">
+                    <div class="cacnut"><form action="<c:url value='/order/displayUser' />" method="post" id="float_left">
+                <input type="submit" value="Chỉnh sửa địa chỉ ">
             </form>
 
             <form action="<c:url value='/order/completeOrder' />" method="post">
-                <input type="submit" value="Continue">
-            </form>
-
+                <input type="submit" value="Tiếp tục">
+            </form></div>
+</div>
         </section>
+                <div class="footer">
+                <div class="footer">
+                    <div class="footer-mot">
+                        <h3 class="footer-nhan">
+                            CÔNG TY CỔ PHẦN CANIFA
+                        </h3>
+                        <p class="footer-text">
+                            Số ĐKKD: 0107574310, ngày cấp: 23/09/2016, nơi cấp: Sở Kế hoạch và đầu tư Hà Nội
+                        </p>
+                        <p class="footer-text">
+                            Trụ sở chính: Số 688, Đường Quang Trung, Phường La Khê, Quận Hà Đông, Hà Nội, Việt Nam
+                        </p>
+                        <p class="footer-text">
+                            Địa chỉ liên hệ: Phòng 301 Tòa nhà GP Invest, 170 La Thành, P. Ô Chợ Dừa, Q. Đống Đa, Hà Nội
+                        </p>
+                        <p class="footer-text">
+                            Số điện thoại: +8424 - 7303.0222
+                        </p>
+                        <p class="footer-text">
+                            Fax: +8424 - 6277.6419
+                        </p>
+                        <p class="footer-text">
+                            Địa chỉ email: hello@canifa.com
+                        </p>
+                    </div>
+                    <div class="footer-hai">
+                        <h3 class="footer-nhan">
+                            THƯƠNG HIỆU
+                        </h3>
+                        <p class="footer-text footer-text-dong-chu">
+                            Giới thiệu
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Tin tức
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Tuyển dụng
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Với cộng đồng
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Hệ thống cửa hàng
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Liên hệ
+                        </p>
+
+                    </div>
+                    <div class="footer-ba">
+                        <h3 class="footer-nhan">
+                            HỖ TRỢ
+                        </h3>
+                        <p class="footer-text footer-text-dong-chu">
+                            Hỏi đáp
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Chính sách KHTT
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Chính sách vận chuyển
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Hướng dẫn chọn size
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Kiểm tra đơn hàng
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Quy định đổi hàng
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Tra cứu điểm thẻ
+                        </p>
+                        <p class="footer-text footer-text-dong-chu">
+                            Chính sách bảo mật
+                        </p>
+                    </div>
+                    <div class="footer-bon">
+                        <h3 class="footer-nhan">
+                            PHƯƠNG THỨC THANH TOÁN
+                        </h3>
+                        <i class="footer-icon fa-brands fa-cc-visa"></i>
+                        <i class="footer-icon fa-brands fa-cc-mastercard"></i>
+                        <i class="footer-icon fa-brands fa-cc-jcb"></i>
+                        <i class="footer-icon fa-regular fa-building-columns"></i>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+
+                </div>
+            </div>
     </body>
 
 </html>

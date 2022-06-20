@@ -19,7 +19,6 @@
     </head>
 
     <body>
-
         <div class="trang_chu">
 
             <div class="logo-header">
@@ -37,7 +36,7 @@
                                 <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/">TRANG CHỦ</a>
                             </li>
                             <li class="header__thanh-menu-menu-chi-tiet">
-                                <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/san_pham.jsp">SẢN PHẨM</a>
+                                <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/san_pham">SẢN PHẨM</a>
                             </li>
                             <li class="header__thanh-menu-menu-chi-tiet">
                                 <a class="header__thanh-menu-duong-dan" href="/Btl_ltw_n12/order/showCart">GIỎ HÀNG</a>
@@ -82,7 +81,7 @@
                 <div class="content-san-pham">
                     <c:forEach items="${spList}" var="sanpham" end = "11">
                         <a class="content-san-pham-con" href="sp_chiTiet?spctid=${sanpham.getSanPhamID()}">
-                            <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${sanpham.getSanPhamCode()}.jpg);"></div>
+                            <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${sanpham.getSanPhamCode()});"></div>
                             <h4 class="content-san-pham-con-ten">${sanpham.getTen()}</h4>
                             <div class="content-san-pham-con-gia">
                                 <span class="content-san-pham-con-gia-cu">1.200.000đ</span>

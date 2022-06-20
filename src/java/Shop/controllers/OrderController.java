@@ -74,10 +74,16 @@ public class OrderController extends HttpServlet {
         if (cart == null)
             cart = new GioHang();
         String code = request.getParameter("code");
+        
+        int soLuong = Integer.parseInt(request.getParameter("soLuong"));
+        
         SanPham product = spDao.laySPTheoCode(code);
         if (product != null) {
             HoaDonChiTiet lineItem = new HoaDonChiTiet();
             lineItem.setSanPham(product);
+            
+            lineItem.setSoLuong(soLuong);
+            
             cart.themSanPham(lineItem);
         }
         session.setAttribute("cart", cart);
@@ -121,6 +127,9 @@ public class OrderController extends HttpServlet {
             HoaDonChiTiet lineItem = new HoaDonChiTiet();
             lineItem.setSanPham(product);
             cart.xoaSanPham(lineItem);
+        }
+         if (cart == null || cart.getCount() == 0) {
+            request.setAttribute("emptyCart", "Gio hàng của bạn trống");
         }
         return defaultURL;
     }
@@ -200,6 +209,7 @@ public class OrderController extends HttpServlet {
         HttpSession session = request.getSession();
         HoaDon invoice = (HoaDon) session.getAttribute("invoice");
         HoaDonDao.themHoaDon(invoice);
+        session.setAttribute("cart", null);
         
         return "/cart/thanhcong.jsp";
     }    

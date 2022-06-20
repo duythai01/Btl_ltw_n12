@@ -34,10 +34,13 @@
                 <div class="header__thanh-menu-menu">
                     <ul class="header__thanh-menu-menu-danh-sach">
                         <li class="header__thanh-menu-menu-chi-tiet">
-                            <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/>TRANG CHỦ</a>
+                            <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12"/>TRANG CHỦ</a>
                         </li>
                         <li class="header__thanh-menu-menu-chi-tiet">
-                            <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/san_pham.jsp">SẢN PHẨM</a>
+                            <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/san_pham">SẢN PHẨM</a>
+                        </li>
+                        <li class="header__thanh-menu-menu-chi-tiet">
+                            <a class="header__thanh-menu-duong-dan" href="/Btl_ltw_n12/order/showCart">Giỏ Hàng</a>
                         </li>
 
                         <li class="header__thanh-menu-menu-chi-tiet">
@@ -76,7 +79,7 @@
                 <!-- product -->
                 <c:forEach items="${spNamList}" var="spNam" end = "5">
                    <a class="content-san-pham-con" href="sp_chiTiet?spctid=${spNam.getSanPhamID()}">
-                    <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${spNam.getSanPhamCode()}.jpg);"></div>
+                    <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${spNam.getSanPhamCode()});"></div>
                     <h4 class="content-san-pham-con-ten">${spNam.getTen()}</h4>
                     <div class="content-san-pham-con-gia">
                         <span class="content-san-pham-con-gia-cu">1.200.000đ</span>
@@ -272,7 +275,7 @@
                 <!-- product -->
                  <c:forEach items="${spNuList}" var="spNu" end = "5">
                    <a class="content-san-pham-con" href="sp_chiTiet?spctid=${spNu.getSanPhamID()}">
-                    <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${spNu.getSanPhamCode()}.jpg);"></div>
+                    <div class="content-san-pham-con-anh" style="background-image: url(./images/AnhSanPham/${spNu.getSanPhamCode()});"></div>
                     <h4 class="content-san-pham-con-ten">${spNu.getTen()}</h4>
                     <div class="content-san-pham-con-gia">
                         <span class="content-san-pham-con-gia-cu">1.200.000đ</span>

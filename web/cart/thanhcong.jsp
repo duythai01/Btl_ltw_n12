@@ -189,14 +189,14 @@
             <li class="header__thanh-menu-menu-chi-tiet">
               <a
                 class="header__thanh-menu-duong-dan"
-                href="http://localhost:8080/Btl_ltw_n12/"
+                href="/Btl_ltw_n12/"
                 >TRANG CHỦ</a
               >
             </li>
             <li class="header__thanh-menu-menu-chi-tiet">
               <a
                 class="header__thanh-menu-duong-dan"
-                href="http://localhost:8080/Btl_ltw_n12/san_pham.jsp"
+                href="/Btl_ltw_n12/san_pham.jsp"
                 >SẢN PHẨM</a
               >
             </li>

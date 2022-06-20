@@ -34,10 +34,10 @@
                 <div class="header__thanh-menu-menu">
                     <ul class="header__thanh-menu-menu-danh-sach">
                         <li class="header__thanh-menu-menu-chi-tiet">
-                            <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/">TRANG CHỦ</a>
+                            <a class="header__thanh-menu-duong-dan" href="/Btl_ltw_n12/">TRANG CHỦ</a>
                         </li>
                         <li class="header__thanh-menu-menu-chi-tiet">
-                            <a class="header__thanh-menu-duong-dan" href="http://localhost:8080/Btl_ltw_n12/san_pham">SẢN PHẨM</a>
+                            <a class="header__thanh-menu-duong-dan" href="/Btl_ltw_n12/san_pham">SẢN PHẨM</a>
                         </li>
                         <li class="header__thanh-menu-menu-chi-tiet">
                             <a class="header__thanh-menu-duong-dan" href="/Btl_ltw_n12/order/showCart">GIỎ HÀNG</a>
